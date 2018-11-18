@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import ReactGA from 'react-ga';
-ReactGA.initialize('UA-60920026-1');
-
 const APP_BLACK = "#47525E"
 const APP_WHITE = "#F7F7F7"
 
