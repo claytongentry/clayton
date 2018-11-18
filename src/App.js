@@ -60,7 +60,8 @@ class App extends Component {
               <Card
                 color="#f6c200"
                 title="Inverse"
-                description="Inverse is a media and entertainment company dedicated to sparking curiosity about the future."
+                description="Inverse is a media and entertainment company dedicated to sparking curiosity about the future. As a software engineer, my work is oriented toward big data management, testing and content recommendation."
+                action={<ActionButton color="#f6c200" href="https://www.inverse.com" value="Visit the Site" />}
               />
             </Stream>
           </Row>
