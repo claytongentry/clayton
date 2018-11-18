@@ -11,12 +11,12 @@ class App extends Component {
       <div className="App container-fluid" style={{ padding: 0 }}>
         <Section noHeader={true}>
           <Row>
-            <div className="col-md-12 d-flex" style={{ backgroundColor: APP_WHITE, display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <img src="images/clayton.png" height={400} />
+            <div className="col-md-12 d-flex" style={{ backgroundColor: APP_WHITE, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+              <H1><span style={{ fontSize: 240}}>Hi</span>, <H1>I'm Clayton.</H1></H1>
+              <H4>I'm a <A href="https://github.com/claytongentry">software engineer</A> with an eye for design.</H4>
             </div>
           </Row>
         </Section>
-
 
         <Poll />
 
@@ -105,16 +105,16 @@ class App extends Component {
         </Section>
         <Section title="I'm easy to contact.">
           <Row>
-            <ContactContainer color="#0077B5">
+            <ContactContainer color="#0077B5" link="https://www.linkedin.com/in/clayton-gentry-6492588a/">
               <i className="fab fa-linkedin-in fa-7x" style={{ color: "white" }}></i>
             </ContactContainer>
-            <ContactContainer color={APP_WHITE}>
+            <ContactContainer color={APP_WHITE} link="https://github.com/claytongentry/">
               <i className="fab fa-github fa-7x" style={{ color: APP_BLACK }}></i>
             </ContactContainer>
-            <ContactContainer color="#BC32A8">
+            <ContactContainer color="#BC32A8" link="https://www.instagram.com/cg3ntry">
               <i className="fab fa-instagram fa-7x" style={{ color: APP_WHITE }}></i>
             </ContactContainer>
-            <ContactContainer color={APP_BLACK}>
+            <ContactContainer color={APP_BLACK} link="mailto:cg3ntry@gmail.com">
               <i className="fas fa-envelope fa-7x" style={{ color: APP_WHITE }}></i>
             </ContactContainer>
           </Row>
@@ -125,10 +125,39 @@ class App extends Component {
   }
 }
 
+const h1Style = {
+  color: APP_BLACK,
+  fontFamily: "Oswald",
+  fontWeight: 900
+}
+
+const H1 = props =>
+  <h1 style={h1Style}>{props.children}</h1>
+
+const H4 = props =>
+  <h4 style={h1Style}>{props.children}</h4>
+
+const aStyle = {
+  color: APP_BLACK,
+  textDecoration: "none"
+}
+
+const underline = {
+  borderBottom: `5px solid ${APP_BLACK}`,
+  display: "inline-block",
+  lineHeight: 1.4
+}
+
+const A = props =>
+  <a {...props} style={aStyle} target="_blank">
+    <span style={underline}>{props.children}</span>
+  </a>
+
 const ContactContainer = props =>
-  <div className="col-md-3 d-flex" style={{ backgroundColor: props.color, justifyContent: "center", alignItems: "center" }}>
+  <a href={props.link} target="_blank" className="col-md-3 d-flex" style={{ backgroundColor: props.color, justifyContent: "center", alignItems: "center" }}>
     {props.children}
-  </div>
+  </a>
+
 
 class Poll extends Component {
 
@@ -141,7 +170,7 @@ class Poll extends Component {
           </h1>
         </div>
         <div className="col-md-6" style={{ alignItems: "center", backgroundColor: APP_WHITE, display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
-          <h1 style={{ color: APP_BLACK, fontFamily: "Oswald", fontWeight: 900 }}>{"-V Woolfe"}</h1>
+          <h1 style={{ color: APP_BLACK, fontFamily: "Oswald", fontWeight: 900 }}>{"-Virginia Woolf"}</h1>
         </div>
       </div>
     )
