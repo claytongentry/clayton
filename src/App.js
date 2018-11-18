@@ -2,14 +2,6 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
-
-library.add(faStroopwafel)
-
-
-
 const APP_BLACK = "#47525E"
 const APP_WHITE = "#F7F7F7"
 
@@ -20,11 +12,10 @@ class App extends Component {
         <Section noHeader={true}>
           <Row>
             <div className="col-md-12 d-flex" style={{ backgroundColor: APP_WHITE, display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <img src="/assets/images/clayton.png" height={400} />
+              <img src="images/clayton.png" height={400} />
             </div>
           </Row>
         </Section>
-
 
 
         <Poll />
@@ -38,7 +29,7 @@ class App extends Component {
                 justifyContent: "center",
                 alignItems: "center"
             }}>
-              <i class="fab fa-github fa-9x" style={{ color: APP_WHITE }}></i>
+              <i className="fab fa-github fa-9x" style={{ color: APP_WHITE }}></i>
             </div>
             <div className="col-md-7" style={{ display: "flex", flexDirection: "column", padding: 0 }}>
               <Card
@@ -115,16 +106,16 @@ class App extends Component {
         <Section title="I'm easy to contact.">
           <Row>
             <ContactContainer color="#0077B5">
-              <i class="fab fa-linkedin-in fa-7x" style={{ color: "white" }}></i>
+              <i className="fab fa-linkedin-in fa-7x" style={{ color: "white" }}></i>
             </ContactContainer>
             <ContactContainer color={APP_WHITE}>
-              <i class="fab fa-github fa-7x" style={{ color: APP_BLACK }}></i>
+              <i className="fab fa-github fa-7x" style={{ color: APP_BLACK }}></i>
             </ContactContainer>
             <ContactContainer color="#BC32A8">
-              <i class="fab fa-instagram fa-7x" style={{ color: APP_WHITE }}></i>
+              <i className="fab fa-instagram fa-7x" style={{ color: APP_WHITE }}></i>
             </ContactContainer>
             <ContactContainer color={APP_BLACK}>
-              <i class="fas fa-envelope fa-7x" style={{ color: APP_WHITE }}></i>
+              <i className="fas fa-envelope fa-7x" style={{ color: APP_WHITE }}></i>
             </ContactContainer>
           </Row>
 
@@ -135,7 +126,7 @@ class App extends Component {
 }
 
 const ContactContainer = props =>
-  <div class="col-md-3 d-flex" style={{ backgroundColor: props.color, justifyContent: "center", alignItems: "center" }}>
+  <div className="col-md-3 d-flex" style={{ backgroundColor: props.color, justifyContent: "center", alignItems: "center" }}>
     {props.children}
   </div>
 
@@ -143,7 +134,7 @@ class Poll extends Component {
 
   render() {
     return (
-      <div class="row" style={{ marginLeft: "auto", marginRight: "auto" }}>
+      <div className="row" style={{ marginLeft: "auto", marginRight: "auto" }}>
         <div className="col-md-6" style={{ alignItems: "center", backgroundColor: "#EF464B", display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
           <h1 style={{ color: "white", fontFamily: "Oswald", fontWeight: 900 }}>
             “How much better is silence; the coffee cup, the table. How much better to sit by myself like the solitary sea-bird that opens its wings on the stake. Let me sit here for ever with bare things, this coffee cup, this knife, this fork, things in themselves, myself being myself.”
