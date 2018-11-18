@@ -67,3 +67,10 @@ li p {
     transform: rotate(360deg);
   }
 }
+
+@media (max-width: 768px) {
+
+  .quote {
+    font-size: 24px;
+  }
+}

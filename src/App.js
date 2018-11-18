@@ -166,7 +166,7 @@ class Poll extends Component {
     return (
       <div className="row" style={{ marginLeft: "auto", marginRight: "auto" }}>
         <div className="col-md-6" style={{ alignItems: "center", backgroundColor: "#EF464B", display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
-          <h1 style={{ color: "white", fontFamily: "Oswald", fontWeight: 900 }}>
+          <h1 style={{ color: "white", fontFamily: "Oswald", fontWeight: 900 }} className="quote">
             “How much better is silence; the coffee cup, the table. How much better to sit by myself like the solitary sea-bird that opens its wings on the stake. Let me sit here for ever with bare things, this coffee cup, this knife, this fork, things in themselves, myself being myself.”
           </h1>
         </div>
