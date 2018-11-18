@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStroopwafel } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faStroopwafel)
+
+
+
 const APP_BLACK = "#47525E"
 const APP_WHITE = "#F7F7F7"
 
@@ -30,7 +38,7 @@ class App extends Component {
                 justifyContent: "center",
                 alignItems: "center"
             }}>
-              <img src="/assets/images/github_logo.png" />
+              <i class="fab fa-github fa-9x" style={{ color: APP_WHITE }}></i>
             </div>
             <div className="col-md-7" style={{ display: "flex", flexDirection: "column", padding: 0 }}>
               <Card
@@ -106,26 +114,30 @@ class App extends Component {
         </Section>
         <Section title="I'm easy to contact.">
           <Row>
-            <div class="col-md-3 d-flex" style={{ backgroundColor: "#0077B5"}}>
-
-            </div>
-            <div class="col-md-3 d-flex" style={{ backgroundColor: APP_WHITE }}>
-
-            </div>
-            <div class="col-md-3 d-flex" style={{ backgroundColor: "#BC32A8"}}>
-
-            </div>
-            <div class="col-md-3 d-flex" style={{ backgroundColor: APP_BLACK }}>
-
-            </div>
+            <ContactContainer color="#0077B5">
+              <i class="fab fa-linkedin-in fa-7x" style={{ color: "white" }}></i>
+            </ContactContainer>
+            <ContactContainer color={APP_WHITE}>
+              <i class="fab fa-github fa-7x" style={{ color: APP_BLACK }}></i>
+            </ContactContainer>
+            <ContactContainer color="#BC32A8">
+              <i class="fab fa-instagram fa-7x" style={{ color: APP_WHITE }}></i>
+            </ContactContainer>
+            <ContactContainer color={APP_BLACK}>
+              <i class="fas fa-envelope fa-7x" style={{ color: APP_WHITE }}></i>
+            </ContactContainer>
           </Row>
 
         </Section>
-        <div width="100%" style={{ backgroundColor: APP_BLACK, height: 50 }} />
       </div>
     );
   }
 }
+
+const ContactContainer = props =>
+  <div class="col-md-3 d-flex" style={{ backgroundColor: props.color, justifyContent: "center", alignItems: "center" }}>
+    {props.children}
+  </div>
 
 class Poll extends Component {
 
@@ -181,8 +193,8 @@ class Section extends Component {
 }
 
 const SectionHeader = props =>
-  <div style={{ padding: 20 }}>
-    <h2 style={{ color: APP_WHITE, fontFamily: "Oswald", fontWeight: 900 }}>
+  <div style={{ height: 300 }}>
+    <h2 style={{ color: APP_WHITE, fontFamily: "Oswald", fontWeight: 900, lineHeight: "300px" }}>
       {props.value}
     </h2>
   </div>
