@@ -223,6 +223,7 @@ const SectionHeader = props =>
 
 const cardStyle = {
   alignItems: "center",
+  borderRadius: 0,
   display: "flex",
   flexDirection: "column",
   flexGrow: 1,
