@@ -12,7 +12,7 @@ class App extends Component {
         <Section noHeader={true}>
           <Row>
             <div className="col-md-12 d-flex" style={{ backgroundColor: APP_WHITE, display: "flex", justifyContent: "center", alignItems: "center" }}>
-              <img src="/assets/images/clayton.png" height={300} />
+              <img src="/assets/images/clayton.png" height={400} />
             </div>
           </Row>
         </Section>
