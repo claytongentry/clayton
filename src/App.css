@@ -10,15 +10,14 @@ p {
   margin: 0;
 }
 
-a: {
+a {
   color: inherit;
-  text-decoration: underline;
-}
-
-a:hover {
   text-decoration: none;
 }
 
+a:hover {
+  color: inherit;
+}
 
 li {
   display: "table";

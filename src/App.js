@@ -167,11 +167,18 @@ class Poll extends Component {
       <div className="row" style={{ marginLeft: "auto", marginRight: "auto" }}>
         <div className="col-md-6" style={{ alignItems: "center", backgroundColor: "#EF464B", display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
           <h1 style={{ color: "white", fontFamily: "Oswald", fontWeight: 900 }} className="quote">
-            “How much better is silence; the coffee cup, the table. How much better to sit by myself like the solitary sea-bird that opens its wings on the stake. Let me sit here for ever with bare things, this coffee cup, this knife, this fork, things in themselves, myself being myself.”
+            "Clayton is a rock solid engineer, a blast to collaborate with, and just an overall great dude.  That said, flawless hair is an occasional workplace distraction."
           </h1>
         </div>
         <div className="col-md-6" style={{ alignItems: "center", backgroundColor: APP_WHITE, display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
-          <h1 style={{ color: APP_BLACK, fontFamily: "Oswald", fontWeight: 900 }}>{"-Virginia Woolf"}</h1>
+          <a href="https://www.linkedin.com/in/stevemarshall/" target="_blank">
+            <h1 style={{ color: APP_BLACK, fontFamily: "Oswald", fontWeight: 900 }}>
+              -Steve Marshall
+            </h1>
+            <p style={{ color: APP_BLACK }}>
+              Product Designer, Co-Founder at Inverse & Sports Bet Collective
+            </p>
+          </a>
         </div>
       </div>
     )
