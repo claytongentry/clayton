@@ -4,15 +4,122 @@ import './App.css';
 
 const APP_BLACK = "#47525E"
 const APP_WHITE = "#F7F7F7"
+const APP_RED   = "#EF464B"
+
+const styles = {
+  container: {
+    padding: 0
+  },
+  h1: {
+    color: APP_BLACK,
+    fontFamily: "Oswald",
+    fontWeight: 900
+  },
+  a: {
+    color: APP_BLACK,
+    textDecoration: "none"
+  },
+  btn: {
+    backgroundColor: APP_BLACK,
+    borderRadius: 10,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    height: 50,
+    marginRight: "auto",
+    marginTop: 10,
+    width: 250,
+    marginLeft: "auto",
+    boxShadow: "2px 2px 3px #333"
+  },
+  underline: {
+    borderBottom: `5px solid ${APP_BLACK}`,
+    display: "inline-block",
+    lineHeight: 1.4
+  },
+  headerContainer: {
+    alignItems: "center",
+    backgroundColor: APP_WHITE,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center"
+  },
+  contactContainer: {
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  hi: {
+    fontSize: 240
+  },
+  logoBg: {
+    alignItems: "center",
+    backgroundColor: APP_BLACK,
+    color: "white",
+    display: "flex",
+    justifyContent: "center"
+  },
+  openSource: {
+    display: "flex",
+    flexDirection: "column",
+    padding: 0
+  },
+  rail: {
+    backgroundColor: APP_BLACK,
+    color: "white",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  stream: {
+    display: "flex",
+    flexDirection: "column",
+    padding: 0
+  },
+  card: {
+    alignItems: "center",
+    borderRadius: 0,
+    display: "flex",
+    flexDirection: "column",
+    flexGrow: 1,
+    justifyContent: "center",
+    margin: 0,
+    padding: 40, paddingLeft: 60, paddingRight: 60
+  },
+  sectionHeader: {
+    color: APP_WHITE,
+    fontFamily: "Oswald",
+    fontWeight: 900,
+    lineHeight: "300px"
+  },
+  quoteContainer: {
+    marginLeft: "auto", marginRight: "auto"
+  },
+  quoteTextContainer: {
+    alignItems: "center",
+    backgroundColor: APP_RED,
+    display: "flex",
+    justifyContent: "center",
+    minHeight: 300,
+    padding: 50
+  },
+  quoteAttributionContainer: {
+    alignItems: "center",
+    backgroundColor: APP_WHITE,
+    display: "flex",
+    justifyContent: "center",
+    minHeight: 300,
+    padding: 50
+  }
+}
 
 class App extends Component {
   render() {
     return (
-      <div className="App container-fluid" style={{ padding: 0 }}>
+      <div className="App container-fluid" style={styles.container}>
         <Section noHeader={true}>
           <Row>
-            <div className="col-md-12 d-flex" style={{ backgroundColor: APP_WHITE, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
-              <H1><span style={{ fontSize: 240}}>Hi</span>, <H1>I'm Clayton.</H1></H1>
+            <div className="col-md-12 d-flex" style={styles.headerContainer}>
+              <H1><span style={styles.hi}>Hi</span>, <H1>I'm Clayton.</H1></H1>
               <H4>I'm a <A href="https://github.com/claytongentry">software engineer</A> with an eye for design.</H4>
             </div>
           </Row>
@@ -22,16 +129,10 @@ class App extends Component {
 
         <Section className="row" title="I vibe with open-source.">
           <div className="row" style={{ marginLeft: "auto", marginRight: "auto" }}>
-            <div className="d-none d-md-block col-md-5 d-md-flex" style={{
-                backgroundColor: APP_BLACK,
-                color: "white",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center"
-            }}>
+            <div className="d-none d-md-block col-md-5 d-md-flex" style={styles.logoBg}>
               <i className="fab fa-github fa-9x" style={{ color: APP_WHITE }}></i>
             </div>
-            <div className="col-md-7" style={{ display: "flex", flexDirection: "column", padding: 0 }}>
+            <div className="col-md-7" style={styles.openSource}>
               <Card
                 color="#f3ec80"
                 title="Furlex"
@@ -126,36 +227,24 @@ class App extends Component {
   }
 }
 
-const h1Style = {
-  color: APP_BLACK,
-  fontFamily: "Oswald",
-  fontWeight: 900
-}
-
 const H1 = props =>
-  <h1 style={h1Style}>{props.children}</h1>
+  <h1 style={styles.h1}>{props.children}</h1>
 
 const H4 = props =>
-  <h4 style={h1Style}>{props.children}</h4>
-
-const aStyle = {
-  color: APP_BLACK,
-  textDecoration: "none"
-}
-
-const underline = {
-  borderBottom: `5px solid ${APP_BLACK}`,
-  display: "inline-block",
-  lineHeight: 1.4
-}
+  <h4 style={styles.h1}>{props.children}</h4>
 
 const A = props =>
-  <a {...props} style={aStyle} target="_blank">
-    <span style={underline}>{props.children}</span>
+  <a {...props} style={styles.a} target="_blank">
+    <span style={styles.underline}>{props.children}</span>
   </a>
 
 const ContactContainer = props =>
-  <a href={props.link} target="_blank" className="col-md-3 d-flex" style={{ backgroundColor: props.color, justifyContent: "center", alignItems: "center" }}>
+  <a
+    href={props.link}
+    target="_blank"
+    className="col-md-3 d-flex"
+    style={{ ...styles.contactContainer, backgroundColor: props.color }}
+  >
     {props.children}
   </a>
 
@@ -164,15 +253,15 @@ class Poll extends Component {
 
   render() {
     return (
-      <div className="row" style={{ marginLeft: "auto", marginRight: "auto" }}>
-        <div className="col-md-6" style={{ alignItems: "center", backgroundColor: "#EF464B", display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
-          <h1 style={{ color: "white", fontFamily: "Oswald", fontWeight: 900 }} className="quote">
+      <div className="row" style={styles.quoteContainer}>
+        <div className="col-md-6" style={styles.quoteTextContainer}>
+          <h1 style={{ ...styles.h1, color: APP_WHITE }} className="quote">
             "Clayton is a rock solid engineer, a blast to collaborate with, and just an overall great dude.  That said, flawless hair is an occasional workplace distraction."
           </h1>
         </div>
-        <div className="col-md-6" style={{ alignItems: "center", backgroundColor: APP_WHITE, display: "flex", justifyContent: "center", minHeight: 300, padding: 50 }}>
+        <div className="col-md-6" style={styles.quoteAttributionContainer}>
           <a href="https://www.linkedin.com/in/stevemarshall/" target="_blank">
-            <h1 style={{ color: APP_BLACK, fontFamily: "Oswald", fontWeight: 900 }}>
+            <h1 style={styles.h1}>
               -Steve Marshall
             </h1>
             <p style={{ color: APP_BLACK }}>
@@ -185,23 +274,9 @@ class Poll extends Component {
   }
 }
 
-const btnStyle = {
-  backgroundColor: APP_BLACK,
-  borderRadius: 10,
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  height: 50,
-  marginRight: "auto",
-  marginTop: 10,
-  width: 250,
-  marginLeft: "auto",
-  boxShadow: "2px 2px 3px #333"
-}
-
 const ActionButton = props =>
   <a href={props.href} target="_blank">
-    <div style={btnStyle}>
+    <div style={styles.btn}>
       <p style={{ color: props.color, fontFamily: "Oswald" }}>{props.value}</p>
     </div>
   </a>
@@ -222,22 +297,11 @@ class Section extends Component {
 
 const SectionHeader = props =>
   <div style={{ height: 300 }}>
-    <h2 style={{ color: APP_WHITE, fontFamily: "Oswald", fontWeight: 900, lineHeight: "300px" }}>
+    <h2 style={styles.sectionHeader}>
       {props.value}
     </h2>
   </div>
 
-
-const cardStyle = {
-  alignItems: "center",
-  borderRadius: 0,
-  display: "flex",
-  flexDirection: "column",
-  flexGrow: 1,
-  justifyContent: "center",
-  margin: 0,
-  padding: 40, paddingLeft: 60, paddingRight: 60
-}
 
 const Row = props =>
   <div className="row" style={{ marginLeft: "auto", marginRight: "auto"}}>
@@ -245,16 +309,12 @@ const Row = props =>
   </div>
 
 const Rail = props =>
-  <div className="d-none d-md-block col-md-5 d-md-flex" style={{
-      backgroundColor: APP_BLACK,
-      color: "white",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center"
-  }}>{props.children}</div>
+  <div className="d-none d-md-block col-md-5 d-md-flex" style={styles.rail}>
+    {props.children}
+  </div>
 
 const Stream = props =>
-  <div className="col-md-7" style={{ display: "flex", flexDirection: "column", padding: 0 }}>
+  <div className="col-md-7" style={styles.stream}>
     {props.children}
   </div>
 
@@ -264,12 +324,11 @@ class Card extends Component {
     const color = this.props.textColor || APP_BLACK
 
     return (
-      <div style={{...cardStyle, backgroundColor: this.props.color }} className="card">
-        <h1 style={{ color, fontFamily: "Oswald", fontWeight: 900 }}>{this.props.title}</h1>
-        <p style={{
-          color,
-          fontFamily: "Oswald", fontWeight: 900
-          }}>{this.props.description}</p>
+      <div style={{ ...styles.card, backgroundColor: this.props.color }} className="card">
+        <h1 style={{ ...styles.h1, color }}>{this.props.title}</h1>
+        <p style={{ ...styles.h1, color }}>
+          {this.props.description}
+        </p>
         {this.props.action}
         {this.props.children}
       </div>
