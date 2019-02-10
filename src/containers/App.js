@@ -4,7 +4,10 @@ import React, { Component } from 'react';
 import { debounce } from '../utils'
 
 // Components
-import { Menu, MenuItem } from '../components'
+import { Card, Menu, MenuItem, Text, Title } from '../components'
+
+// Styles
+import { APP_WHITE } from '../styles/colors'
 
 class App extends Component {
 
@@ -23,11 +26,27 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Menu>
+        <Menu viewport={this.state.viewport}>
           <MenuItem label="Labels" href="#labels" />
           <MenuItem label="Pursuits" href="#pursuits" />
           <MenuItem label="Recommendations" href="#recommendations" />
         </Menu>
+
+        {/* Banner Card */}
+        <Card style={{ marginLeft: 110, marginRight: 110 }}>
+          <Title style={{ color: APP_WHITE, fontSize: 120, marginLeft: 160 }}>
+            HEY
+          </Title>
+          <Title style={{ color: APP_WHITE, fontSize: 36, textAlign: "center"}}>
+            I'M CLAYTON
+          </Title>
+          <Text style={{ color: APP_WHITE, textAlign: "center" }}>
+            I write software and drink coffee. And I’m all out of coffee.
+          </Text>
+          <Text style={{ fontSize: 10, color: APP_WHITE, textAlign: "center" }}>
+            New York, NY
+          </Text>
+        </Card>
       </div>
     )
   }

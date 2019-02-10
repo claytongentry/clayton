@@ -4,7 +4,9 @@ import { APP_WHITE } from '../styles/colors'
 import Text from './Text'
 
 const style = {
-  display: "inline"
+  display: "inline-block",
+  marginLeft: 50,
+  marginTop: 50
 }
 
 export default class MenuItem extends Component {
