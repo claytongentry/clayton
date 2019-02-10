@@ -1,5 +1,4 @@
 function debounce(func, wait, immediate) {
-  console.log("debounce")
 	var timeout;
 	return function() {
 		var context = this, args = arguments;

@@ -11,8 +11,6 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-    this.resize = this.resize.bind(this)
-
     this.state = {
       viewport: {}
     }
@@ -35,20 +33,14 @@ class App extends Component {
   }
 
   addResizeListener() {
-    console.log("adding resize listener...")
-    window.addEventListener("resize", this.resize)
-    // this.resize()
+    const onResize = () => this.setViewport()
+    window.addEventListener("resize", debounce(onResize, 250))
+    this.setViewport()
   }
 
-  resize() {
-    const setViewport = () => {
-      console.log("set viewport")
-      const { height, width } = window
-      this.setState({ viewport: { height, width }})
-    }
-
-    console.log("maybe running")
-    debounce(setViewport, 250)
+  setViewport() {
+    const { innerHeight, innerWidth } = window
+    this.setState({ viewport: { innerHeight, innerWidth }})
   }
 }
 
