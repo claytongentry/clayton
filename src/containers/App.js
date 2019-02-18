@@ -88,7 +88,7 @@ class App extends Component {
 }
 
 const Icon = (props) =>
-  <a href={props.href} target="_blank">
+  <a href={props.href} target="_blank" rel="noopener noreferrer">
     <i className={`fab ${props.name} fa-2x`} style={{ color: APP_WHITE, padding: 50 }}/>
   </a>
 
