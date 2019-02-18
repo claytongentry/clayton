@@ -1,7 +1,11 @@
 import React from 'react'
 
+import { APP_WHITE } from '../styles/colors'
+
 const styles = {
-  fontFamily: "Nunito"
+  color: APP_WHITE,
+  fontFamily: "Nunito",
+  fontWeight: 300
 }
 
 const Text = (props) => {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 
-import { APP_WHITE } from '../styles/colors'
-
+// Components
 import { Card, Title } from '../components'
 
 class Labels extends Component {
@@ -36,7 +35,7 @@ const Label = ({ text }) => {
 
   return (
     <Card className="col-md-6 col-sm-12" style={{ flex: 1, alignItems: "center", justifyContent: "center", margin: 10, height: 100 }}>
-      <Title style={{ color: APP_WHITE }}>{text}</Title>
+      <Title>{text}</Title>
     </Card>
   )
 }

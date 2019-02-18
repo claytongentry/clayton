@@ -39,13 +39,13 @@ class App extends Component {
 
         {/* Banner Card */}
         <Card style={{ marginLeft: 110, marginRight: 110 }}>
-          <Title style={{ color: APP_WHITE, fontSize: 120, marginLeft: 160 }}>
+          <Title style={{ fontSize: 120, marginLeft: 160 }}>
             HEY,
           </Title>
-          <Title style={{ color: APP_WHITE, fontSize: 36, textAlign: "center"}}>
+          <Title style={{ fontSize: 36, textAlign: "center"}}>
             I'M CLAYTON.
           </Title>
-          <Text style={{ color: APP_WHITE, textAlign: "center" }}>
+          <Text style={{ textAlign: "center" }}>
             I write software and drink coffee.<br/>And I’m all out of coffee.
           </Text>
           <Text style={{ fontSize: 10, color: APP_WHITE, textAlign: "center" }}>
@@ -109,7 +109,7 @@ class Section extends Component {
 
     return (
       <div id={id} style={{ margin: 40, marginLeft: "auto", marginRight: "auto", maxWidth: 750}}>
-        <Title style={{ color: APP_WHITE, fontSize: 24, textAlign: "center", marginBottom: 10 }}>{title}</Title>
+        <Title style={{ fontSize: 24, textAlign: "center", marginBottom: 10 }}>{title}</Title>
         {body}
       </div>
     )
