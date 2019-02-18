@@ -8,7 +8,9 @@ const styles = {
 }
 
 const Card = (props) => {
-  return <div style={{...styles, ...props.style}}>{props.children}</div>
+  const style = {...styles, ...props.style}
+  const className = `card ${props.className}`
+  return <div style={style} className={className}>{props.children}</div>
 }
 
 export default Card

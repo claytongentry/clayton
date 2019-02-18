@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 
+// Containers
+import Labels from './Labels'
+import Pursuits from './Pursuits'
+import Recommendations from './Recommendations'
+
 // Helpers
 import { debounce } from '../utils'
 
@@ -71,6 +76,10 @@ class App extends Component {
           </div>
 
         </Card>
+
+        <Section title="LABELS" body={<Labels/>} />
+        <Section title="PURSUITS" body={<Pursuits />}/>
+        <Section title="RECOMMENDATIONS" body={<Recommendations />} />
       </div>
     )
   }
@@ -92,6 +101,24 @@ const Icon = (props) =>
     <i className={`fab ${props.name} fa-2x`} style={{ color: APP_WHITE, padding: 50 }}/>
   </a>
 
+class Section extends Component {
+
+  render() {
+    const { title, body } = this.props
+    const id = this.getSectionId(title)
+
+    return (
+      <div id={id} style={{ margin: 40, marginLeft: "auto", marginRight: "auto", maxWidth: 750}}>
+        <Title style={{ color: APP_WHITE, fontSize: 24, textAlign: "center", marginBottom: 10 }}>{title}</Title>
+        {body}
+      </div>
+    )
+  }
+
+  getSectionId(title) {
+    return title.toLowerCase()
+  }
+}
 
 
 export default App

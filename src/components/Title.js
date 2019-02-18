@@ -1,7 +1,8 @@
 import React from 'react'
 
 const styles = {
-  fontFamily: 'Allerta Stencil'
+  fontFamily: 'Allerta Stencil',
+  fontWeight: 700
 }
 
 const Title = (props) => {
