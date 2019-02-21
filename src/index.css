@@ -22,3 +22,38 @@ code {
 .labels_container {
   text-align: "center"
 }
+
+.rec {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  min-height: 400px;
+}
+
+.rec-date {
+  font-size: 12px;
+  font-weight: 300;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.rec-text {
+  align-text: center;
+  margin-right: 300px;
+  padding: 100px;
+}
+
+.rec-attr {
+  background-color: #FDFEEC;
+  border-radius: 0px 15px 15px 0px;
+  display: flex;
+  padding: 40px;
+  float: right;
+  max-width: 300px;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}

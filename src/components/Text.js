@@ -9,7 +9,12 @@ const styles = {
 }
 
 const Text = (props) => {
-  return <p style={{...styles, ...props.style }}>{props.children}</p>
+  const { className, style } = props
+  return (
+    <p style={{...styles, ...style }} className={className}>
+      {props.children}
+    </p>
+  )
 }
 
 export default Text

@@ -38,17 +38,17 @@ class App extends Component {
         </Menu>
 
         {/* Banner Card */}
-        <Card style={{ marginLeft: 110, marginRight: 110 }}>
+        <Card style={{ marginLeft: 110, marginRight: 110, marginTop: 60, minHeight: 500 }}>
           <Title style={{ fontSize: 120, marginLeft: 160 }}>
             HEY,
           </Title>
           <Title style={{ fontSize: 36, textAlign: "center"}}>
             I'M CLAYTON.
           </Title>
-          <Text style={{ textAlign: "center" }}>
+          <Text style={{ textAlign: "center", fontSize: 14, marginTop: 60 }}>
             I write software and drink coffee.<br/>And I’m all out of coffee.
           </Text>
-          <Text style={{ fontSize: 10, color: APP_WHITE, textAlign: "center" }}>
+          <Text style={{ fontSize: 14, color: APP_WHITE, textAlign: "center", marginTop: 60 }}>
             New York, NY
           </Text>
 
@@ -108,8 +108,8 @@ class Section extends Component {
     const id = this.getSectionId(title)
 
     return (
-      <div id={id} style={{ margin: 40, marginLeft: "auto", marginRight: "auto", maxWidth: 750}}>
-        <Title style={{ fontSize: 24, textAlign: "center", marginBottom: 10 }}>{title}</Title>
+      <div id={id} style={{ margin: 80, marginLeft: "auto", marginRight: "auto", maxWidth: 1200}}>
+        <Title style={{ fontSize: 24, textAlign: "center", padding: 40 }}>{title}</Title>
         {body}
       </div>
     )

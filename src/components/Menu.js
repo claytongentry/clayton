@@ -7,13 +7,12 @@ import { APP_WHITE }    from '../styles/colors'
 import Text from './Text'
 
 const styles = {
-
+  margin: 20
 }
 
 export default class Menu extends Component {
 
   render() {
-    console.log(this.props.viewport)
     if (this.props.viewport.innerWidth < MOBILE_BREAK) {
       return <MobileMenu {...this.props} />
     } else {
