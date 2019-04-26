@@ -38,13 +38,9 @@ class App extends Component {
         </Menu>
 
         {/* Banner Card */}
-        <Card style={{ marginLeft: 110, marginRight: 110, marginTop: 60, minHeight: 500 }}>
-          <Title style={{ fontSize: 120, marginLeft: 160 }}>
-            HEY,
-          </Title>
-          <Title style={{ fontSize: 36, textAlign: "center"}}>
-            I'M CLAYTON.
-          </Title>
+        <Card className="card banner">
+          <h1 id="hey">HEY, </h1>
+          <h1 id="clayton">I'M CLAYTON.</h1>
           <Text style={{ textAlign: "center", fontSize: 14, marginTop: 60 }}>
             I write software and drink coffee.<br/>And I’m all out of coffee.
           </Text>

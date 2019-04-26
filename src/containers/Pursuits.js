@@ -60,7 +60,7 @@ class Pursuits extends Component {
 
 const PursuitCard = ({title, body}) =>
   <Card className="col-md-4 col-sm-12" style={{ flex: 1, alignItems: "center", margin: 10, padding: 20 }}>
-    <Title>{title}</Title>
+    <h2 className=".thin">{title}</h2>
     {body.map(el => <PursuitCardSection {...el} />)}
   </Card>
 

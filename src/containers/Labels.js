@@ -20,7 +20,7 @@ class Labels extends Component {
 
   render() {
     return (
-      <div className="labels_container">
+      <div className="container labels_container">
         {this.state.rows.map((row) =>
           <div className="row">
             {row.map(label => <Label text={label} />)}
@@ -34,8 +34,8 @@ class Labels extends Component {
 const Label = ({ text }) => {
 
   return (
-    <Card className="col-md-6 col-sm-12" style={{ flex: 1, alignItems: "center", justifyContent: "center", margin: 10, height: 100 }}>
-      <Title>{text}</Title>
+    <Card className="label col-md-6 col-sm-12">
+      <h2>{text}</h2>
     </Card>
   )
 }
