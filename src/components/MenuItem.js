@@ -14,7 +14,7 @@ export default class MenuItem extends Component {
     const { href, label } = this.props
 
     return (
-      <li style={style} onClick={() => window.location.hash = href}>
+      <li style={style} onClick={() => window.location.hash = href} className="menu-item">
         <Text style={{ color: APP_WHITE }}>{label}</Text>
       </li>
     )
