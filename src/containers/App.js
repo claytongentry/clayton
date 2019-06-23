@@ -30,7 +30,7 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: 40, minHeight: "100vh" }}>
+      <div style={{ marginTop: 40, maxHeight: "100vh" }}>
 
         <div id="pic">
           <img src="./images/clayton_no_bg.png" style={{ borderRadius: "inherit" }} />
