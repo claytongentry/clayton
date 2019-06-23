@@ -4,14 +4,14 @@ html, body, p {
 }
 
 body {
-  margin: 0;
+  margin: 20px;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #241D1D;
+  background-image: linear-gradient(to bottom, #6EEEFF, #A850D8);
 }
 
 a:hover {
@@ -23,6 +23,9 @@ img {
 }
 
 .card {
+  background-image: linear-gradient(to bottom, #6EEEFF, #A850D8);
+  box-shadow: 0px 10px 8px #A850D8;
+  border: 0;
   padding: 20px;
 }
 
@@ -64,8 +67,11 @@ h2 {
 }
 
 .banner {
-  margin: 75px;
-  min-height: 500px;
+  min-height: 600px;
+  display: flex;
+  justify-content: space-between;
+  padding: 60px;
+  z-index: -1;
 }
 
 code {
@@ -83,7 +89,6 @@ code {
 
 .pursuit {
   align-items: center;
-  flex: 1;
   margin: 10;
   padding: 20;
   background-color: red;
@@ -106,7 +111,7 @@ code {
   display: flex;
   justify-content: center;
   margin-bottom: 50px;
-  min-height: 400px;
+  /* min-height: 300px; */
 }
 
 .rec-date {
@@ -124,26 +129,65 @@ code {
 }
 
 .rec-attr {
-  background-color: #FDFEEC;
-  border-radius: 0px 15px 15px 0px;
-  display: flex;
-  padding: 40px;
-  float: right;
-  max-width: 300px;
   align-items: center;
-  text-align: center;
-  position: absolute;
-  right: 0;
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: 2px 3px 15px #666;
+  display: flex;
+  float: right;
   height: 100%;
+  max-height: 250px;
+  min-width: 300px;
+  justify-content: center;
+  padding: 40px;
+  position: absolute;
+  right: -40px;
+  text-align: center;
 }
 
 #hey {
-  font-size: 120px;
-  margin-left: 160px;
+  font-size: 160px;
+  margin-left: 80px;
 }
 
 #clayton {
   text-align: center;
+}
+
+#pic {
+  background-color: #83ECEF;
+  border-radius: 50%;
+  box-shadow: 0px 2px 50px -10px #A850D8;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+}
+
+#iconsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  body {
+    margin: 20px 100px;
+  }
+
+  .banner {
+    top: -300px;
+  }
+
+  #pic {
+    margin-right: -25px;
+    width: 350px;
+  }
+
+  #iconsContainer {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 600px;
+  }
 }
 
 
@@ -158,35 +202,36 @@ code {
   }
 
   #hey {
-    margin-top: 60px;
-    font-size: 48px;
+    font-size: 64px;
     margin-left: auto;
     margin-right: auto;
   }
 
   .banner {
-    margin: 25px;
-    margin-top: 60px;
+    margin-top: -70px;
+    min-height: 500px;
+    padding-top: 100px;
+    z-index: -1;
   }
 
   .rec {
-    margin: 25px;
     margin-bottom: 80px;
     padding: 0px;
   }
 
   .rec-attr {
     align-items: center;
-    background-color: #FDFEEC;
-    border-radius: 0px 0px 15px 15px;
     height: 100%;
-    min-width: 100%;
-    position: static;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: 0;
     text-align: center;
+    top: 40px;
   }
 
   .rec-text {
     margin: 25px;
-    padding: 60px 10px 30px 10px;
+    padding: 60px 10px 0px 10px;
   }
 }

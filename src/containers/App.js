@@ -30,25 +30,27 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <Menu viewport={this.state.viewport}>
-          <MenuItem label="Labels" href="#labels" />
-          <MenuItem label="Pursuits" href="#pursuits" />
-          <MenuItem label="Recommendations" href="#recommendations" />
-        </Menu>
+      <div style={{ marginTop: 40, minHeight: "100vh" }}>
+
+        <div id="pic">
+          <img src="./images/clayton_no_bg.png" style={{ borderRadius: "inherit" }} />
+        </div>
 
         {/* Banner Card */}
         <Card className="card banner">
-          <h1 id="hey">HEY, </h1>
-          <h1 id="clayton">I'M CLAYTON.</h1>
-          <Text style={{ textAlign: "center", fontSize: 14, marginTop: 60 }}>
+          <div>
+            <h1 id="hey">HEY, </h1>
+            <h1 id="clayton">I'M CLAYTON.</h1>
+          </div>
+
+          <Text style={{ textAlign: "center", fontSize: 14 }}>
             I write software and drink coffee.<br/>And I’m all out of coffee.
           </Text>
-          <Text style={{ fontSize: 14, color: APP_WHITE, textAlign: "center", marginTop: 60 }}>
+          <Text style={{ fontSize: 14, color: APP_WHITE, textAlign: "center" }}>
             New York, NY
           </Text>
 
-          <div style={{ textAlign: "center" }}>
+          <div id="iconsContainer">
             <Icon
               name="fa-linkedin-in"
               href="https://www.linkedin.com/in/clayton-gentry-6492588a/"
@@ -68,17 +70,17 @@ class App extends Component {
               name="fas fa-envelope"
               href="mailto:cg3ntry@gmail.com"
             />
-
           </div>
 
-        </Card>
 
-        <Section title="LABELS" body={<Labels/>} />
-        <Section title="PURSUITS" body={<Pursuits />}/>
-        <Section title="RECOMMENDATIONS" body={<Recommendations />} />
+        </Card>
       </div>
     )
   }
+
+  // <Section title="PURSUITS" body={<Pursuits />}/>
+  // <Section title="LABELS" body={<Labels/>} />
+  // <Section title="RECOMMENDATIONS" body={<Recommendations />} />
 
   addResizeListener() {
     const onResize = () => this.setViewport()
@@ -94,7 +96,7 @@ class App extends Component {
 
 const Icon = (props) =>
   <a href={props.href} target="_blank" rel="noopener noreferrer">
-    <i className={`fab ${props.name} fa-2x`} style={{ color: APP_WHITE, padding: 50 }}/>
+    <i className={`fab ${props.name} fa-2x`} style={{ color: APP_WHITE }}/>
   </a>
 
 class Section extends Component {
@@ -104,8 +106,7 @@ class Section extends Component {
     const id = this.getSectionId(title)
 
     return (
-      <div id={id} style={{ margin: 80, marginLeft: "auto", marginRight: "auto", maxWidth: 1200}}>
-        <Title style={{ fontSize: 24, textAlign: "center", padding: 40 }}>{title}</Title>
+      <div id={id} style={{ marginTop: 40 }}>
         {body}
       </div>
     )

@@ -39,7 +39,7 @@ class Pursuits extends Component {
 }
 
 const PursuitCard = ({title, body, link}) =>
-  <Card className="pursuit col-md-4 col-sm-12">
+  <Card className="pursuit col-sm">
     <h2 className=".thin">{title}</h2>
     {body.map(el => <PursuitCardSection {...el} />)}
     {link ? <Out link={link} /> : null}

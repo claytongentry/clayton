@@ -30,6 +30,10 @@ li p {
   vertical-align: middle;
 }
 
+i {
+  padding: 0px;
+}
+
 .App {
   text-align: center;
 }
