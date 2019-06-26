@@ -17,9 +17,7 @@ class App extends Component {
     return (
       <div className="container-fluid">
 
-        <div id="pic">
-          <img src="./images/clayton_no_bg.png" />
-        </div>
+        <img src="./images/clayton_no_bg.png" />
 
         {/* Banner Card */}
         <Card className="card banner">
