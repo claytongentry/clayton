@@ -5,9 +5,6 @@ import Labels from './Labels'
 import Pursuits from './Pursuits'
 import Recommendations from './Recommendations'
 
-// Helpers
-import { debounce } from '../utils'
-
 // Components
 import { Card, Menu, MenuItem, Text, Title } from '../components'
 
@@ -15,18 +12,6 @@ import { Card, Menu, MenuItem, Text, Title } from '../components'
 import { APP_WHITE } from '../styles/colors'
 
 class App extends Component {
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      viewport: {}
-    }
-  }
-
-  componentDidMount() {
-    this.addResizeListener()
-  }
 
   render() {
     return (
@@ -81,17 +66,6 @@ class App extends Component {
   // <Section title="PURSUITS" body={<Pursuits />}/>
   // <Section title="LABELS" body={<Labels/>} />
   // <Section title="RECOMMENDATIONS" body={<Recommendations />} />
-
-  addResizeListener() {
-    const onResize = () => this.setViewport()
-    window.addEventListener("resize", debounce(onResize, 250))
-    this.setViewport()
-  }
-
-  setViewport() {
-    const { innerHeight, innerWidth } = window
-    this.setState({ viewport: { innerHeight, innerWidth }})
-  }
 }
 
 const Icon = (props) =>
@@ -116,6 +90,5 @@ class Section extends Component {
     return title.toLowerCase()
   }
 }
-
 
 export default App
