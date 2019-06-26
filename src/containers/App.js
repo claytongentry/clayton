@@ -15,14 +15,15 @@ class App extends Component {
 
   render() {
     return (
-      <div style={{ marginTop: 40, maxHeight: "100vh" }}>
+      <div className="container-fluid">
 
         <div id="pic">
-          <img src="./images/clayton_no_bg.png" style={{ borderRadius: "inherit" }} />
+          <img src="./images/clayton_no_bg.png" />
         </div>
 
         {/* Banner Card */}
         <Card className="card banner">
+
           <div>
             <h1 id="hey">HEY, </h1>
             <h1 id="clayton">I'M CLAYTON.</h1>
