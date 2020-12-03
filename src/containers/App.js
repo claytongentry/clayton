@@ -13,12 +13,12 @@ class App extends Component {
       <div className="container-fluid">
         <Card className="card banner">
           <div>
-            <h1 id="hey">HEY, </h1>
-            <h1 id="clayton">I'M CLAYTON.</h1>
+            <h1 id="hey">Hello, </h1>
+            <h1 id="clayton">I'm Clayton.</h1>
           </div>
 
           <Text style={{ textAlign: "center", fontSize: 14 }}>
-            I write software and drink coffee.<br/>And I’m all out of coffee.
+            <a target="_blank" rel="noopener noreferrer" href="https://www.gutenberg.org/files/4300/4300-h/4300-h.htm#chap13">Think you're escaping and run into yourself. Longest way round is the shortest way home.</a>
           </Text>
           <Text style={{ fontSize: 14, color: APP_WHITE, textAlign: "center" }}>
             New York, NY

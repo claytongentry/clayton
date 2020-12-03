@@ -5,7 +5,7 @@ import { APP_WHITE } from '../styles/colors'
 const styles = {
   color: APP_WHITE,
   fontFamily: "Nunito",
-  fontWeight: 300
+  fontWeight: 300,
 }
 
 const Text = (props) => {
