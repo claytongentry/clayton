@@ -1,12 +1,7 @@
 import React, { Component } from 'react';
 
-// Containers
-import Labels from './Labels'
-import Pursuits from './Pursuits'
-import Recommendations from './Recommendations'
-
 // Components
-import { Card, Menu, MenuItem, Text, Title } from '../components'
+import { Card, Text } from '../components'
 
 // Styles
 import { APP_WHITE } from '../styles/colors'
@@ -16,12 +11,7 @@ class App extends Component {
   render() {
     return (
       <div className="container-fluid">
-
-        <img src="./images/clayton_no_bg.png" />
-
-        {/* Banner Card */}
         <Card className="card banner">
-
           <div>
             <h1 id="hey">HEY, </h1>
             <h1 id="clayton">I'M CLAYTON.</h1>
@@ -61,33 +51,11 @@ class App extends Component {
       </div>
     )
   }
-
-  // <Section title="PURSUITS" body={<Pursuits />}/>
-  // <Section title="LABELS" body={<Labels/>} />
-  // <Section title="RECOMMENDATIONS" body={<Recommendations />} />
 }
 
 const Icon = (props) =>
   <a href={props.href} target="_blank" rel="noopener noreferrer">
     <i className={`fab ${props.name} fa-2x`} style={{ color: APP_WHITE }}/>
   </a>
-
-class Section extends Component {
-
-  render() {
-    const { title, body } = this.props
-    const id = this.getSectionId(title)
-
-    return (
-      <div id={id} style={{ marginTop: 40 }}>
-        {body}
-      </div>
-    )
-  }
-
-  getSectionId(title) {
-    return title.toLowerCase()
-  }
-}
 
 export default App
