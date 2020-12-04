@@ -159,6 +159,9 @@ code {
     margin: 5px;
   }
 
+  .container-fluid {
+    padding: 40px;
+  }
 
   h1 {
     font-size: 24px;
@@ -208,6 +211,10 @@ code {
 
 /* iPads (portrait) ----------- */
 @media (max-width : 736px) {
+  .container-fluid {
+    padding: 15px;
+  }
+
   #hey {
     font-size: 64px;
   }
