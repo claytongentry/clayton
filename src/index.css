@@ -105,67 +105,6 @@ code {
   cursor: pointer;
 }
 
-.labels_container {
-  text-align: center;
-}
-
-.pursuit {
-  align-items: center;
-  margin: 10;
-  padding: 20;
-  background-color: red;
-}
-
-.pursuit .outBtn {
-  align-items: center;
-  align-self: flex-end;
-  background-color: #fdfeec;
-  border-radius: 50px;
-  color: black;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  text-decoration: none;
-  width: 40px;
-}
-
-.rec {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
-  /* min-height: 300px; */
-}
-
-.rec-date {
-  font-size: 12px;
-  font-weight: 300;
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.rec-text {
-  align-text: center;
-  margin-right: 300px;
-  padding: 100px;
-}
-
-.rec-attr {
-  align-items: center;
-  background-color: white;
-  border-radius: 25px;
-  box-shadow: 2px 3px 15px #666;
-  display: flex;
-  float: right;
-  height: 100%;
-  max-height: 250px;
-  min-width: 300px;
-  justify-content: center;
-  padding: 40px;
-  position: absolute;
-  right: -40px;
-  text-align: center;
-}
 
 #hey {
   font-size: 160px;
@@ -264,5 +203,12 @@ code {
 
   #iconsContainer {
     justify-content: space-between;
+  }
+}
+
+/* iPads (portrait) ----------- */
+@media (max-width : 736px) {
+  #hey {
+    font-size: 64px;
   }
 }
