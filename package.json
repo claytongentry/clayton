@@ -2,30 +2,10 @@
   "name": "clayton",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-ga": "^3.3.0",
-    "react-scripts": "^5.0.0"
-  },
   "homepage": "http://claytongentry.github.io",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build && cp CNAME build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "start": "python3 -m http.server 3000 --directory public",
+    "build": "rsync -a --delete public/ build/ && cp CNAME build/",
     "deploy": "npm run build && git subtree push --prefix build origin production"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "devDependencies": {
-    "gh-pages": "^3.2.3"
   }
 }
