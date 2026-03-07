@@ -1,0 +1,144 @@
+:root {
+  --sky: #6eeeff;
+  --violet: #a850d8;
+  --cream: #fdfeec;
+  --hover: #ffdbfa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  background-image: linear-gradient(to bottom, var(--sky), var(--violet));
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: transparent;
+}
+
+.page-shell {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  padding: 50px;
+}
+
+.hero-card {
+  flex: 1;
+  min-height: calc(100vh - 100px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 48px;
+  padding: 120px;
+  border-radius: 25px;
+  background-image: linear-gradient(to bottom, var(--sky), var(--violet));
+  box-shadow: 0 10px 8px var(--violet);
+}
+
+.hero-copy,
+.hero-details {
+  display: grid;
+  gap: 14px;
+}
+
+.headline {
+  margin: 0;
+  color: var(--cream);
+  font-family: "Carter One", Georgia, serif;
+  font-weight: 700;
+  text-shadow: 2px 3px 2px var(--violet);
+}
+
+.headline-hello {
+  margin-left: 80px;
+  font-size: clamp(4rem, 11vw, 10rem);
+  line-height: 0.9;
+}
+
+.headline-name {
+  font-size: clamp(2.25rem, 5vw, 4.25rem);
+  text-align: center;
+  line-height: 1;
+}
+
+.summary,
+.location {
+  margin: 0 auto;
+  max-width: 42rem;
+  color: var(--cream);
+  text-align: center;
+  font-size: 14px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 16px;
+  width: min(100%, 600px);
+  margin: 0 auto;
+}
+
+.social-links a {
+  color: var(--cream);
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+  color: var(--hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .page-shell {
+    padding: 5px;
+  }
+
+  .hero-card {
+    min-height: 500px;
+    padding: 15vh 40px;
+  }
+
+  .headline-hello {
+    margin-left: 0;
+    text-align: center;
+    font-size: clamp(4rem, 13vw, 6rem);
+  }
+
+  .headline-name {
+    font-size: 24px;
+  }
+
+  .social-links {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 736px) {
+  .page-shell {
+    padding: 15px;
+  }
+
+  .hero-card {
+    padding: 72px 24px;
+    gap: 40px;
+  }
+
+  .headline-hello {
+    font-size: 64px;
+  }
+}
