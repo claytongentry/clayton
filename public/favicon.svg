@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Clayton Gentry">
+  <rect width="64" height="64" fill="#080808"/>
+  <path
+    d="M45 16A18 18 0 1 0 45 48"
+    fill="none"
+    stroke="#f3f2ef"
+    stroke-linecap="round"
+    stroke-width="8"
+  />
+  <path
+    d="M40.5 26V38"
+    fill="none"
+    stroke="hsl(334 85% 50%)"
+    stroke-linecap="round"
+    stroke-width="5"
+  />
+</svg>
