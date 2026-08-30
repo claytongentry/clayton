@@ -3,18 +3,26 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#080808">
+    <meta
+      name="theme-color"
+      content="#080808"
+      media="(prefers-color-scheme: dark)"
+    >
+    <meta
+      name="theme-color"
+      content="#f3f0e9"
+      media="(prefers-color-scheme: light)"
+    >
     <meta
       name="description"
-      content="Clayton Gentry is the CTO at Podstock."
+      content="Clayton Gentry is a software developer living in Brooklyn, New York."
     >
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <link rel="alternate icon" href="favicon.png" type="image/png">
-    <link rel="manifest" href="manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&amp;family=Schibsted+Grotesk:wght@400;500;600;700;800&amp;display=swap"
       rel="stylesheet"
     >
     <link rel="stylesheet" href="styles.css">
@@ -23,36 +31,83 @@
   <body>
     <main class="site-shell">
       <section class="hero" aria-labelledby="intro-title">
-        <p class="eyebrow">Clayton Gentry</p>
+        <header class="intro">
+          <p class="eyebrow">Clayton Gentry</p>
+        </header>
 
-        <h1 id="intro-title">
-          <span class="role-prefix">CTO at</span>
-          <a
-            class="accent"
-            href="https://podstock.io"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Podstock
-          </a>
-        </h1>
+        <div class="story">
+          <h1 id="intro-title">
+            I’m a software developer living in Brooklyn, New York.
+          </h1>
 
-        <nav class="link-row" aria-label="Social links">
-          <a
-            href="https://github.com/claytongentry/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            GitHub
-          </a>
-          <a
-            href="https://www.linkedin.com/in/clayton-gentry-6492588a/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            LinkedIn
-          </a>
-        </nav>
+          <div class="bio">
+            <p>
+              I’m the co-founder and CTO of
+              <a
+                class="accent"
+                href="https://podstock.io"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Podstock</a>, where we help podcast networks make sense of their
+              data and streamline their operations.
+            </p>
+
+            <p>
+              Before Podstock, I led platform engineering at
+              <a
+                class="text-link"
+                href="https://bdg.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Bustle Digital Group</a>, and before that, I worked as an
+              engineer at
+              <a
+                class="text-link"
+                href="https://www.inverse.com"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Inverse</a>.
+            </p>
+
+            <p>
+              I’m the author of
+              <a
+                class="text-link"
+                href="https://github.com/claytongentry/lasso"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Lasso</a>, for testing HTTP interactions, and
+              <a
+                class="text-link"
+                href="https://github.com/claytongentry/furlex"
+                rel="noopener noreferrer"
+                target="_blank"
+              >Furlex</a>, for extracting structured data from web pages.
+            </p>
+
+            <p>
+              I grew up in the riverbank city of Little Rock, Arkansas, and I
+              make it back often enough.
+            </p>
+          </div>
+
+          <nav class="link-row" aria-label="Social links">
+            <a
+              href="https://github.com/claytongentry/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              GitHub <span aria-hidden="true">↗</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/clayton-gentry-6492588a/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              LinkedIn <span aria-hidden="true">↗</span>
+            </a>
+          </nav>
+        </div>
       </section>
     </main>
   </body>
